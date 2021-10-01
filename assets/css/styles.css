@@ -1,0 +1,144 @@
+/* Layout
+
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+/* ----- FONTS ----- */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/* ----- COLORS ----- */
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDark: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --veryLight: hsl(0, 0%, 95%);
+}
+
+html, body {
+  font-size: 15px;
+}
+
+main {
+  max-width: 100vw;
+  min-height: 95vh;
+
+  width: 100%;
+  height: 100%;
+
+  padding-top: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  width: calc(100% - 40px);
+  max-width: 850px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+section {
+  padding: 2.8rem;
+  color: var(--transparentWhite);
+
+}
+
+h2 {
+  margin: 2rem 0;
+
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-family: "Big Shoulders Display";
+  color: var(--veryLight);
+}
+
+p {
+  margin-bottom: 5rem;
+
+  font-family: "Lexend Deca";
+  line-height: 25px;
+}
+
+button {
+  padding: 1rem 2rem;
+
+  border-radius: 50px;
+  border: 2px solid var(--veryLight);
+  
+  font-family: "Lexend Deca";
+  background: var(--veryLight);
+  
+}
+
+button:hover {
+  transition: all 0.25s;
+  background: transparent;
+  color: var(--veryLight)!important;
+}
+
+.sedans {
+  background: var(--brightOrange);
+}
+
+  .sedans > button {
+    color: var(--brightOrange);
+  }
+
+.suvs {
+  background: var(--darkCyan);
+}
+
+  .suvs > button {
+    color: var(--darkCyan);
+  }
+
+.luxury {
+  background: var(--veryDark);
+}
+
+  .luxury > button {
+    color: var(--veryDark);
+  }
+
+/* ----- FOOTER ------ */
+footer { 
+  width: calc(100% - 60px);
+
+  margin: 2rem auto;
+
+  line-height: 20px;
+  font-family: "Lexend Deca";
+  font-size: 12px; text-align: center; 
+}
+
+footer a {
+   color: hsl(228, 45%, 44%);
+}
+
+/* ----- RESPONSIVIDADE ------ */
+@media only screen and (min-width: 1440px) {
+  html, body {
+    font-size: 20px;
+  }
+  article{
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  article {
+    width: calc(100% - 40px);
+    max-width: 325px;
+    grid-template-columns: 1fr;
+  }
+}
